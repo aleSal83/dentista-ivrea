@@ -1,0 +1,68 @@
+/* Stile generale */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #005f5f; /* Verde scuro */
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #80e0d0; /* Verde acqua più chiaro */
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 95, 95, 0.6), rgba(0, 95, 95, 0.6)),
+  url('src/assets/image/pexels-fr3nks-305565.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-section .content {
+  max-width: 600px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Sfondo colore principale */
+body {
+  background-color: #e0f7f5; /* Verde acqua chiaro */
+}
