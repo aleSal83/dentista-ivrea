@@ -11,8 +11,9 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #005f5f; /* Verde scuro */
-  color: white;
+  background-color: #80e0d0;; /* Verde scuro */
+  color: #13453CFF;
+  border-bottom: 2px solid #13453CFF;
 }
 
 .logo {
@@ -23,23 +24,23 @@ body, html {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: #13453CFF;
   font-weight: 500;
 }
 
 .nav-links li a:hover {
-  color: #80e0d0; /* Verde acqua più chiaro */
+  color: #13453c;; /* Verde acqua più chiaro */
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 95, 95, 0.6), rgba(0, 95, 95, 0.6)),
-  url('src/assets/image/pexels-fr3nks-305565.jpg') no-repeat center center/cover;
+  background: #80e0d0;
   height: 100vh;
   display: flex;
   justify-content: center;
