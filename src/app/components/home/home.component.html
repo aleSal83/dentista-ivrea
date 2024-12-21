@@ -1,8 +1,8 @@
 
 
   <nav>
-    <div class="menu" *ngFor="let item of menuItems">
-      <a href="#" (mouseover)="toggleDropdown(item)" (mouseleave)="closeDropdown(item)">
+    <div class="menu flex h-[50px]" *ngFor="let item of menuItems">
+      <a class=" text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200" href="#" (mouseover)="toggleDropdown(item)" (mouseleave)="closeDropdown(item)">
         {{ item.label }}
       </a>
       <div class="dropdown" [class.show]="item.open">
@@ -24,33 +24,6 @@
 
   <app-dental-card></app-dental-card>
 
-<!--  <section id="services">-->
-<!--    <h3>Servizi</h3>-->
-<!--    <div class="services">-->
-<!--      <div class="service">-->
-<!--        <img class="rounded-md" src="../../../assets/image/igene_orale.jpg" alt="Igiene orale">-->
-<!--        <h1 class="font-bold">Igiene orale</h1>-->
-<!--        <p>Trattamenti per mantenere i tuoi denti sani e puliti.</p>-->
-<!--      </div>-->
-<!--      <div class="service">-->
-<!--        <img class="rounded-md" src="../../../assets/image/ortodonzia_1.jpeg" alt="Ortodonzia">-->
-<!--        <h4>Ortodonzia</h4>-->
-<!--        <p>Allineamento dentale con soluzioni moderne.</p>-->
-<!--      </div>-->
-<!--      <div class="service">-->
-<!--        <img class="rounded-md" src="../../../assets/image/impianti-dentali-1.jpg" alt="Implantologia">-->
-<!--        <h4>Implantologia</h4>-->
-<!--        <p>Impianti dentali per un sorriso naturale.</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-
-<!--  <section id="contact">-->
-<!--    <h3>Contatti</h3>-->
-<!--    <p>Indirizzo: Via dei Sorrisi, 10, Roma</p>-->
-<!--    <p>Email: infomail</p>-->
-<!--    <p>Telefono: +39 06 1234567</p>-->
-<!--  </section>-->
 </div>
 
 <footer>
