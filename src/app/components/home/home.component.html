@@ -1,32 +1,32 @@
-
-
-  <nav>
-    <div class="menu flex h-[50px]" *ngFor="let item of menuItems">
-      <a class=" text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200" href="#" (mouseover)="toggleDropdown(item)" (mouseleave)="closeDropdown(item)">
-        {{ item.label }}
-      </a>
-      <div class="dropdown" [class.show]="item.open">
-        <a *ngFor="let subItem of item.subItems" href="{{ subItem.link }}">{{ subItem.label }}</a>
-      </div>
+<nav>
+  <div class="menu flex h-[50px]" *ngFor="let item of menuItems">
+    <a class="text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200" href="#"
+       (mouseover)="toggleDropdown(item)" (mouseleave)="closeDropdown(item)">
+      {{ item.label }}
+    </a>
+    <div class="dropdown" [class.show]="item.open">
+      <a *ngFor="let subItem of item.subItems" href="{{ subItem.link }}">{{ subItem.label }}</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <div class="hero flex flex-col">
   <h1>Studio Dentistico Moderno</h1>
-    <p>Il tuo sorriso è la nostra priorità</p>
+  <p>Il tuo sorriso è la nostra priorità</p>
 </div>
 
-<div class="content">
-  <section id="about">
-    <h3>Chi siamo</h3>
-    <p>Con oltre 20 anni di esperienza, offriamo trattamenti odontoiatrici di alta qualità per tutta la famiglia. Il nostro team è composto da professionisti esperti pronti a prendersi cura del tuo sorriso.</p>
-  </section>
+<!--<div class="content">-->
+<!--  <section id="about">-->
+<!--    <h3>Chi siamo</h3>-->
+<!--    <p>Con oltre 20 anni di esperienza, offriamo trattamenti odontoiatrici di alta qualità per tutta la famiglia. Il nostro team è composto da professionisti esperti pronti a prendersi cura del tuo sorriso.</p>-->
+<!--  </section>-->
+<!--</div>-->
 
+<div class="mt-9">
   <app-dental-card></app-dental-card>
-
 </div>
 
-<footer>
-  <p>&copy; 2024 Studio Dentistico Moderno. Tutti i diritti riservati.</p>
-</footer>
+<!--<footer>-->
+<!--  <p>&copy; 2024 Studio Dentistico Moderno. Tutti i diritti riservati.</p>-->
+<!--</footer>-->
 
