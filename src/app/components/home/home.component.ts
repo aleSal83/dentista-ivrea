@@ -1,18 +1,20 @@
 import {AfterViewInit, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DentalCardComponent} from '../dental-card/dental-card.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   imports: [
     CommonModule,
     DentalCardComponent,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
 
   menuItems = [
     {
@@ -28,9 +30,9 @@ export class HomeComponent implements AfterViewInit {
       label: 'Servizi',
       open: false,
       subItems: [
-        {label: 'Ortodonzia', link: '#service1'},
-        {label: 'Igiene', link: '#service2'},
-        {label: 'Sbiancamento', link: '#service3'}
+        { label: 'Ortodonzia', link: '/services/ortodonzia' },
+        { label: 'Igiene', link: '/home/igene' },  // rotta già configurata
+        { label: 'Sbiancamento', link: '/services/sbiancamento' }
       ]
     },
     {
@@ -51,52 +53,5 @@ export class HomeComponent implements AfterViewInit {
   closeDropdown(item: any) {
     item.open = false;
   }
-
-  constructor() {
-  }
-
-  ngAfterViewInit() {
-    //this.setupMenu();
-    // this.applyBackgroundAnimation();
-  }
-
-
-
-  setupMenu(): void {
-    document.querySelectorAll('.menu').forEach(menu => {
-      const link = menu.querySelector('a');
-      const dropdown = menu.querySelector('.dropdown');
-
-      if (link && dropdown) {
-        link.addEventListener('mouseover', () => {
-          dropdown.classList.add('show');
-        });
-
-        menu.addEventListener('mouseleave', () => {
-          dropdown.classList.remove('show');
-        });
-      }
-    });
-  }
-
-  // applyBackgroundAnimation(): void {
-  //   const heroSection = document.querySelector('.hero') as HTMLElement;
-  //
-  //   if (heroSection) {
-  //     // Aggiungi un'immagine di sfondo iniziale trasparente
-  //     heroSection.style.backgroundImage = "url('assets/image/dentista-destra.jpg')";
-  //     heroSection.style.backgroundSize = 'cover';
-  //     heroSection.style.backgroundPosition = 'center';
-  //     heroSection.style.opacity = '0';
-  //     heroSection.style.transform = 'scale(1.05)';
-  //
-  //     // Attiva l'animazione dopo un breve ritardo
-  //     setTimeout(() => {
-  //       heroSection.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
-  //       heroSection.style.opacity = '1';
-  //       heroSection.style.transform = 'scale(1)';
-  //     }, 100);
-  //   }
-  // }
 
 }

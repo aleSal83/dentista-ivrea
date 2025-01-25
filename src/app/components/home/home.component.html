@@ -2,7 +2,6 @@
   <nav>
     <div class="menu flex flex-col h-[50px] relative" *ngFor="let item of menuItems">
       <a class="text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200"
-        href="#"
         (mouseover)="toggleDropdown(item)"
         (mouseleave)="closeDropdown(item)">
         {{ item.label }}
@@ -12,7 +11,7 @@
         [class.show]="item.open">
         <a *ngFor="let subItem of item.subItems"
           class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
-          href="{{ subItem.link }}">
+           [routerLink]="subItem.link">
           {{ subItem.label }}
         </a>
       </div>
