@@ -7,7 +7,9 @@
 
 body {
   height: 100%;
-  font-family: "Comfortaa", arial, sans-serif;
+  font-family: "Comfortaa", serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
   color: #64b5f6;
   margin: 0;
   padding: 0;
@@ -64,8 +66,18 @@ nav a:hover {
 }
 /* Animazione */
 .dropdown.show {
-  display: flex;
   animation: slideDown 0.3s ease-in-out;
+}
+
+/* Dropdown Hidden by Default */
+.dropdown {
+  display: none;
+  min-width: 150px; /* Larghezza minima del dropdown */
+}
+
+/* Show Dropdown */
+.dropdown.show {
+  display: block;
 }
 @keyframes slideDown {
   from {
@@ -79,74 +91,3 @@ nav a:hover {
 }
 
 
-.hero {
-  opacity: 50%;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  z-index: -1;
-  opacity: 100%;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  text-align: center;
-  font-size: xx-large;
-}
-.hero h2 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-.hero.fade-in {
-  opacity: 1;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Sovrapposizione scura per migliorare la leggibilità */
-  z-index: -1;
-}
-.content {
-
-  padding: 20px;
-}
-
-.content h3 {
-  color: #0074D9;
-  margin-bottom: 10px;
-}
-.content p {
-  margin: 10px 0;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 20px 0;
-}
-.service {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  text-align: center;
-  background: #e3f2fd;
-}
-.service img {
-  max-width: 100px;
-  margin-bottom: 10px;
-}
-footer {
-  background: #e3f2fd;
-  color: #64b5f6;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-}

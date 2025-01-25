@@ -1,32 +1,41 @@
-<nav>
-  <div class="menu flex h-[50px]" *ngFor="let item of menuItems">
-    <a class="text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200" href="#"
-       (mouseover)="toggleDropdown(item)" (mouseleave)="closeDropdown(item)">
-      {{ item.label }}
-    </a>
-    <div class="dropdown" [class.show]="item.open">
-      <a *ngFor="let subItem of item.subItems" href="{{ subItem.link }}">{{ subItem.label }}</a>
+<div style="background-color: #e3f2fd">
+  <nav>
+    <div class="menu flex flex-col h-[50px] relative" *ngFor="let item of menuItems">
+      <a class="text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200"
+        href="#"
+        (mouseover)="toggleDropdown(item)"
+        (mouseleave)="closeDropdown(item)">
+        {{ item.label }}
+      </a>
+      <div
+        class="dropdown absolute top-full left-0 bg-white shadow-md p-2 rounded-md z-10"
+        [class.show]="item.open">
+        <a *ngFor="let subItem of item.subItems"
+          class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
+          href="{{ subItem.link }}">
+          {{ subItem.label }}
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class='border-b-[2px] border-blue-500'></div>
+
+  <div class="min-h-screen flex flex-col justify-center items-center text-center font-bold relative bg-[url('assets/image/dentista-destra.jpg')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-gray-500 bg-opacity-80"></div>
+
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl text-blue-800 mb-4">Studio Dentistico Moderno</h1>
+      <p class="text-lg md:text-2xl text-gray-800">Il tuo sorriso è la nostra priorità</p>
+
     </div>
   </div>
-</nav>
 
-<div class="hero flex flex-col">
-  <h1>Studio Dentistico Moderno</h1>
-  <p>Il tuo sorriso è la nostra priorità</p>
+
+  <footer class="mt-9">
+    <app-dental-card></app-dental-card>
+  </footer>
 </div>
 
-<!--<div class="content">-->
-<!--  <section id="about">-->
-<!--    <h3>Chi siamo</h3>-->
-<!--    <p>Con oltre 20 anni di esperienza, offriamo trattamenti odontoiatrici di alta qualità per tutta la famiglia. Il nostro team è composto da professionisti esperti pronti a prendersi cura del tuo sorriso.</p>-->
-<!--  </section>-->
-<!--</div>-->
 
-<div class="mt-9">
-  <app-dental-card></app-dental-card>
-</div>
-
-<!--<footer>-->
-<!--  <p>&copy; 2024 Studio Dentistico Moderno. Tutti i diritti riservati.</p>-->
-<!--</footer>-->
 

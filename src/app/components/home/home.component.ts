@@ -16,15 +16,6 @@ export class HomeComponent implements AfterViewInit {
 
   menuItems = [
     {
-      label: 'Home',
-      open: false,
-      subItems: [
-        {label: 'Sottolink 1', link: '#home1'},
-        {label: 'Sottolink 2', link: '#home2'},
-        {label: 'Sottolink 3', link: '#home3'}
-      ]
-    },
-    {
       label: 'Chi siamo',
       open: false,
       subItems: [
@@ -65,8 +56,8 @@ export class HomeComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.setupMenu();
-    this.applyBackgroundAnimation();
+    //this.setupMenu();
+    // this.applyBackgroundAnimation();
   }
 
 
@@ -88,24 +79,24 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  applyBackgroundAnimation(): void {
-    const heroSection = document.querySelector('.hero') as HTMLElement;
-
-    if (heroSection) {
-      // Aggiungi un'immagine di sfondo iniziale trasparente
-      heroSection.style.backgroundImage = "url('assets/image/dentista-destra.jpg')";
-      heroSection.style.backgroundSize = 'cover';
-      heroSection.style.backgroundPosition = 'center';
-      heroSection.style.opacity = '0';
-      heroSection.style.transform = 'scale(1.05)';
-
-      // Attiva l'animazione dopo un breve ritardo
-      setTimeout(() => {
-        heroSection.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
-        heroSection.style.opacity = '1';
-        heroSection.style.transform = 'scale(1)';
-      }, 100);
-    }
-  }
+  // applyBackgroundAnimation(): void {
+  //   const heroSection = document.querySelector('.hero') as HTMLElement;
+  //
+  //   if (heroSection) {
+  //     // Aggiungi un'immagine di sfondo iniziale trasparente
+  //     heroSection.style.backgroundImage = "url('assets/image/dentista-destra.jpg')";
+  //     heroSection.style.backgroundSize = 'cover';
+  //     heroSection.style.backgroundPosition = 'center';
+  //     heroSection.style.opacity = '0';
+  //     heroSection.style.transform = 'scale(1.05)';
+  //
+  //     // Attiva l'animazione dopo un breve ritardo
+  //     setTimeout(() => {
+  //       heroSection.style.transition = 'opacity 1s ease-in-out, transform 1s ease-in-out';
+  //       heroSection.style.opacity = '1';
+  //       heroSection.style.transform = 'scale(1)';
+  //     }, 100);
+  //   }
+  // }
 
 }
