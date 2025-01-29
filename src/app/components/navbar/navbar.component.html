@@ -1,0 +1,28 @@
+<div style="background-color: #e3f2fd">
+
+  <nav>
+    <a routerLink="/home" class="mr-4">
+      <img src="assets/logo.png" alt="Logo" class="h-10">
+    </a>
+    <div class="menu flex flex-col h-[50px] relative"
+         *ngFor="let item of menuItems"
+         (mouseleave)="closeDropdown(item)">
+      <a class="text-xl font-bold text-center text-blue-600 hover:bg-blue-600 hover:text-green-200"
+         (click)="toggleDropdown(item)">
+        {{ item.label }}
+      </a>
+      <div class="dropdown absolute top-full left-0 bg-white shadow-md p-2 rounded-md z-10"
+           [class.show]="item.open">
+        <a *ngFor="let subItem of item.subItems"
+           class="block px-4 py-2 text-gray-700 hover:bg-blue-100"
+           [routerLink]="subItem.link">
+          {{ subItem.label }}
+        </a>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class='border-b-[2px] border-blue-800'></div>
+
+</div>
