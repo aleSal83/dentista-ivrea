@@ -6,6 +6,7 @@ import { OdontoiatriaComponent } from './components/odontoiatria/odontoiatria.co
 import { SbiancamentoComponent } from './components/sbiancamento/sbiancamento.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'ortodonzia', component: OdontoiatriaComponent },
   { path: 'igiene', component: IgeneComponent },
