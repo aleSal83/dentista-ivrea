@@ -18,9 +18,9 @@ export class NavbarComponent {
       label: 'Chi siamo',
       open: false,
       subItems: [
-        {label: 'Mission', link: '#about1'},
-        {label: 'Team', link: '#about2'},
-        {label: 'Storia', link: '#about3'}
+        {label: 'Mission', link: '/mission'},
+        {label: 'Team', link: '/team'},
+        {label: 'Storia', link: '/storia'}
       ]
     },
     {
