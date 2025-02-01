@@ -28,7 +28,7 @@ export class NavbarComponent {
       open: false,
       subItems: [
         { label: 'Ortodonzia', link: '/ortodonzia' },
-        { label: 'Igiene', link: '/igene' },  // rotta già configurata
+        { label: 'Igiene', link: '/igiene' },  // rotta già configurata
         { label: 'Sbiancamento', link: '/sbiancamento' }
       ]
     },
